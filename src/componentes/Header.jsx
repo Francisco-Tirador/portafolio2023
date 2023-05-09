@@ -1,3 +1,6 @@
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
 const Header = () => {
@@ -12,8 +15,8 @@ const Header = () => {
             </div>
             <div>
 
-                <img className='Icon ' src="https://cdn-icons-png.flaticon.com/512/733/733641.png" alt="" />
-                <img className='Icon ' src="https://cdn-icons-png.flaticon.com/512/1944/1944250.png" alt="" />
+            <FontAwesomeIcon className='Icon-config' icon={faEnvelope} />
+            <FontAwesomeIcon className='Icon-config'icon={faWhatsapp} />
             </div>
             <div>
                 <img className='Icon ' src="https://cdn-icons-png.flaticon.com/512/3670/3670125.png" alt="Imstagram Francisco Beltran" />

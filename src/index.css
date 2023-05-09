@@ -3,8 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color-scheme: light ;
+  color: #ffffff;
   background-color: #242424;
 
   font-synthesis: none;
@@ -25,6 +25,7 @@ a:hover {
 
 body {
   margin: 0;
+  color: #ffffff;
   /* display: flex;
   place-items: center; */
   /* min-height: 100vh; */
@@ -66,3 +67,27 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.Center{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-12{
+  width: 100%;
+}
+.col-6{
+  width: 50%;
+}
+.col-4{
+  width: 33.3%;
+}
+
+
+
+
+
+
+

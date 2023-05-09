@@ -4,6 +4,9 @@ import Config from './componentes/Config'
 import Header from './componentes/Header'
 import Present from './componentes/Present'
 import Sectiones from './componentes/Sectiones'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import Dividor from './componentes/Dividor'
 
 
 
@@ -19,9 +22,8 @@ function App() {
      <Sectiones/>
      <div className='Resto'>
       <Present/>
-
-      <div  ><iframe src='https://gfycat.com/ifr/AccurateLimpingAchillestang' frameborder='0'  width='30%' height='10%'  allowfullscreen></iframe></div><p> <a href="https://gfycat.com/accuratelimpingachillestang-film-animation-after-effects-freefootage">via Gfycat</a></p>
-
+      <Dividor/>
+     
      </div>
      
 
