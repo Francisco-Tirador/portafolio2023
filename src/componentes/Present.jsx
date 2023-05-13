@@ -15,7 +15,7 @@ const Present = () => {
     Saludos !!!
     </p>
 
-    <span className='btn'>
+    <span className='btn btn-animado'>
       DESCARGAR CURRÍCULUM
     </span>
    </div>

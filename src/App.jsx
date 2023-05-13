@@ -20,11 +20,18 @@ function App() {
      <Header/>
      <Config/>
      <Sectiones/>
-     <div className='Resto'>
+    <div className='Rotador'>
+    <div className='Resto RotaX'>
       <Present/>
-      <Dividor/>
+      {/* <Dividor/> */}
      
      </div>
+     <div className='Resto Rota'>
+      <Present/>
+      
+     
+     </div>
+    </div>
      
 
      <div className='colapso'></div>
