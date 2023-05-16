@@ -47,13 +47,6 @@
     transform: translateX(120px);
     box-shadow: 5px 5px 0px var(--1paleta-Second-color);
   }
-/* 
-  .btn-animado{
-    background-color: aquamarine;
-    animation:1.5s 3s alternate infinite btnMOV;
-    transform: rotate(90deg);
-    rotate: 20deg;
-  } */
 
 
   .DividorCostados{
@@ -131,7 +124,7 @@ overflow: hidden;
   opacity: 30%;
 }
 .Rotador{
-  background-color: #85c7bb;
+  /* background-color: #85c7bb; */
   width: 500px;
   height:500px;
   position: absolute;
@@ -148,15 +141,20 @@ overflow: hidden;
   animation: forwards 2s alternate RotacionX;
 }
 .btnCambio{
-  width: 300px;
-  height: 100px;
+  width: 20px;
+  height: 20px;
   background-color: #022a69;
   position: fixed;
   z-index: 2000;
 }
 .mar{
-  margin-right: 200px;
-  height: 500px;
+  /* margin-right: 00px; */
+  /* height: 500px; */
+}
+.contenCara{
+  max-width: 900px;
+  max-height: 512px;
+  overflow-y:scroll ;
 }
 .Rota{
   right: 0;
@@ -241,6 +239,26 @@ margin-bottom: 0;
 }
   
 }
+
+
+.HabiliIMG{
+  width: 150px;
+  border-radius: 35px;
+  margin: 20px;
+  transition: 0.3s;
+  border: 1px solid var(--1paleta-First-color);
+}
+
+.HabiliIMG:hover{
+  
+box-shadow: 0px 20px 20px 5px var(--Text-inportant-color);
+}
+
+
+
+
+
+
 
 
 

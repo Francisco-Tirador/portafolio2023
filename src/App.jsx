@@ -7,6 +7,7 @@ import Sectiones from './componentes/Sectiones'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Dividor from './componentes/Dividor'
+import Habilidades from './sections/Habilidades'
 
 
 
@@ -27,8 +28,8 @@ function App() {
     <div className="App">
      
       <div className='colapso'></div>
-     <a href="#sd"> <button className='btnCambio mar' >"hola"</button></a>
-     <a href="#23"> <button className='btnCambio' >"hsla"</button></a>
+      <button onClick={Rotacion} className='btnCambio mar' >"hola"</button>
+      <button onClick={Rotacion} className='btnCambio' >"hsla"</button>
      <Header/>
      <Config/>
      <Sectiones/>
@@ -40,7 +41,7 @@ function App() {
      </div>
 
      <div id='23' className={!count?"Resto RotaX":"Resto Rota"}>
-      <Present/>
+     <Habilidades/>
      </div>
      
     </div>
