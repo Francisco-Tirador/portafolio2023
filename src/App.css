@@ -1,7 +1,12 @@
 #root {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 0 ;
+  width: 500%;
   text-align: center;
-
+  background-color: #10b6ed;
   --1paleta-First-color:#022a69;
   --1paleta-Second-color:#10b6ed;
   --1paleta-Tercer-color:#85c7bb;
@@ -63,20 +68,21 @@
   }
 /* //////////////////////////////Header */
 .App{
-  box-sizing: content-box;
+  width: 100%;
   margin: 0;
   background-image: url(./assets/img/back9.jpg);
   height: 100%;
   min-height: 100vh;
  background-attachment: fixed;
- background-size: 120%;
+ background-size: 100%;
  background-position: center;
- position: relative;
  display: flex;
  justify-content: center;
- /* max-width: 200px; */
+ align-items: center;
+/* position: relative; */
 
 }
+
 
 .Header{
   display: inline-block;
@@ -84,7 +90,7 @@ width: 20%;
 border: 1px solid var(--1paleta-Second-color);
 height: 85vh;
 position: fixed;
-margin-top: 3.5%;
+margin-top: 0%;
 max-width:800px ;
 max-height: 800px;
 border-radius: 20px;
@@ -116,35 +122,55 @@ overflow: hidden;
   box-sizing: border-box;
   padding: 20px;
   border-radius: 20px;
-  /* margin-top: 0px auto; */
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 10px black;
   width: 70%;
-  /* display: inline-block; */
-  margin: 1% 0 ;
-  margin-left: 18%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
- 
   opacity: 30%;
 }
 .Rotador{
-  position: relative;
-  /* width:1000px; */
+  background-color: #85c7bb;
+  width: 500px;
+  height:500px;
+  position: absolute;
+  transform: translateX(280px) translateZ(400px );
+  animation-duration: 3000ms; 
 }
 .RotaX{
-  /* position: absolute; */
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: -5%;
+  width: 800px;
   transform: rotateY(-90deg) translateZ(400px);
-  animation: infinite 2s alternate RotacionX;
+  animation: forwards 2s alternate RotacionX;
+}
+.btnCambio{
+  width: 300px;
+  height: 100px;
+  background-color: #022a69;
+  position: fixed;
+  z-index: 2000;
+}
+.mar{
+  margin-right: 200px;
+  height: 500px;
 }
 .Rota{
-  /* position: absolute; */
+  right: 0;
+  bottom: -5%;
+  position: absolute;
+  width: 800px;
   opacity: 100%;
-  /* transform: rotateY(-90deg) translateZ(400px); */
-  animation: infinite 2s alternate Rotacion;
+  transform: rotateY(0deg) translateZ(400px);
+  animation: forwards 2s alternate Rotacion;
 }
+
+/* .Rotador:hover .RotaX,.Rota{
+  animation-play-state: paused;
+} */
 
 @keyframes Rotacion {
   100%{
@@ -159,7 +185,7 @@ overflow: hidden;
   
   100%{
     /* scale: 0.8; */
-    transform: rotateY(0deg) translateZ(0px);
+    transform: rotateY(0deg) translateZ(400px);
     opacity: 100%;
     /* margin-left: 30%; */
   }
@@ -176,7 +202,7 @@ overflow: hidden;
   backdrop-filter: blur(3px);
   width: 5%;
   padding: 5px 0px;
-  margin-top: 3%;
+  margin-bottom: 30%;
   border: 1px solid var(--1paleta-Second-color);
   border-radius: 20px;
   position: fixed;
@@ -186,6 +212,7 @@ overflow: hidden;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 50px;
 }
 
 .IconC{
@@ -194,7 +221,8 @@ overflow: hidden;
 }
 
 .Sec{
-margin-top: 20%;
+margin-top: 0%;
+margin-bottom: 0;
 }
 .img-YO{
 

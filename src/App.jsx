@@ -12,25 +12,37 @@ import Dividor from './componentes/Dividor'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(false)
+
+  const Rotacion=()=>{
+    if(count){
+      setCount(false)
+    }else{
+      setCount(true)
+    }
+  }
+
 
   return (
     <div className="App">
+     
       <div className='colapso'></div>
+     <a href="#sd"> <button className='btnCambio mar' >"hola"</button></a>
+     <a href="#23"> <button className='btnCambio' >"hsla"</button></a>
      <Header/>
      <Config/>
      <Sectiones/>
     <div className='Rotador'>
-    <div className='Resto RotaX'>
+    <div id='as' className={count?"Resto RotaX":"Resto Rota"}>
       <Present/>
       {/* <Dividor/> */}
      
      </div>
-     <div className='Resto Rota'>
+
+     <div id='23' className={!count?"Resto RotaX":"Resto Rota"}>
       <Present/>
-      
-     
      </div>
+     
     </div>
      
 
