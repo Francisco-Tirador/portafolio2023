@@ -122,6 +122,7 @@ overflow: hidden;
   justify-content: center;
   align-items: center;
   opacity: 30%;
+  transition: 0.5s;
 }
 .Rotador{
   /* background-color: #85c7bb; */
@@ -130,6 +131,7 @@ overflow: hidden;
   position: absolute;
   transform: translateX(280px) translateZ(400px );
   animation-duration: 3000ms; 
+  transition: 0.5s;
 }
 .RotaX{
   width: 100%;
@@ -140,6 +142,15 @@ overflow: hidden;
   transform: rotateY(-90deg) translateZ(400px);
   animation: forwards 2s alternate RotacionX;
 }
+.RotaY{
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: -5%;
+  width: 800px;
+  transform: rotateY(-90deg) translateZ(400px);
+  animation: forwards 2s alternate RotacionY;
+}
 .btnCambio{
   width: 20px;
   height: 20px;
@@ -148,8 +159,11 @@ overflow: hidden;
   z-index: 2000;
 }
 .mar{
-  /* margin-right: 00px; */
+  margin-right: 350px;
   /* height: 500px; */
+}
+.displaynone{
+display: none;
 }
 .contenCara{
   max-width: 900px;
@@ -165,18 +179,26 @@ overflow: hidden;
   transform: rotateY(0deg) translateZ(400px);
   animation: forwards 2s alternate Rotacion;
 }
-
-/* .Rotador:hover .RotaX,.Rota{
-  animation-play-state: paused;
-} */
+.RotacionRegreso{
+  animation: forwards 2s alternate RotacionXX;
+}
+.asddd{
+  position: fixed;
+  top: 0;
+}
 
 @keyframes Rotacion {
   100%{
-    /* scale: 0.8; */
     transform: rotateY(90deg) translateZ(400px);
     opacity: 30%;
     display: none;
-    /* margin-left: 30%; */
+  }
+}
+@keyframes RotacionXX {
+  100%{
+    transform: rotateY(-90deg) translateZ(400px);
+    opacity: 30%;
+    display: none;
   }
 }
 @keyframes RotacionX {
@@ -186,6 +208,16 @@ overflow: hidden;
     transform: rotateY(0deg) translateZ(400px);
     opacity: 100%;
     /* margin-left: 30%; */
+  }
+}
+@keyframes RotacionY {
+  0%{
+    transform: rotateY(90deg) translateZ(400px);
+  }
+  
+  100%{
+     transform: rotateY(0deg) translateZ(400px);
+     opacity: 100%;
   }
 }
 
