@@ -1,12 +1,10 @@
 import { useState } from 'react'
 import './App.css'
+import './assets/style/responsive.css'
 import Config from './componentes/Config'
 import Header from './componentes/Header'
 import Present from './componentes/Present'
 import Sectiones from './componentes/Sectiones'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import Dividor from './componentes/Dividor'
 import Habilidades from './sections/Habilidades'
 import Portafolio from './sections/Portafolio'
 
@@ -14,83 +12,101 @@ import Portafolio from './sections/Portafolio'
 
 
 function App() {
-  const [count, setCount] = useState(1)
-  const [Antes, setAntes] = useState(4)
-  const [Activo, setActivo] = useState(0)
+  const [SliderPrincipal, setSliderPrincipal] = useState(1)//Nota SliderPrincipal almacena quin tendra la poscion de vista 
+  const [Antes, setAntes] = useState(4)//Nota Antes almacena a quien se regresa para poder hacer la animacion de regreso
+  const [Lado, setLado] = useState(0)//Nota aqui se deside si la animacion sera derecha izquierda dependiendo del 0 a 1
+  const RotacionSuma = () => {
 
-  const RotacionSuma=()=>{
-    setActivo(0)
-   if(count==4){
-    setAntes(count)
-    setCount(1)
-   }else{
-    setAntes(count)
-    setCount(count+1)
+    setLado(1) //Nota va a la izquierda
+    if (SliderPrincipal == 4) {
+      setAntes(SliderPrincipal)
+      setSliderPrincipal(1)
+    } else {
+      setAntes(SliderPrincipal)
+      setSliderPrincipal(SliderPrincipal + 1)
+    }
+  }
+ 
+  const RotacionResta = () => {
+    setLado(0);//Nota va a la derecha
+    if (SliderPrincipal == 1) {
+      setAntes(SliderPrincipal)
+      setSliderPrincipal(4)
+    } else {
+      setAntes(SliderPrincipal)
+      setSliderPrincipal(SliderPrincipal - 1)
+    }
+  };
+  
+
+  const arrayComponet=[
+    {
+    componente:<Present />,
+    id:1
+   },
+    {
+    componente:<Habilidades />,
+    id:2
+   },
+    {
+    componente:<Portafolio />,
+    id:3
+   },
+    {
+    componente:<Portafolio />,
+    id:4
    }
-  }
-  const RotacionResta=()=>{
-  
-  setActivo(1)
-  // if(Antes==1||count==1){
-  //   if(Antes==4){
-  //     setAntes(4)
-  //     setCount(1)
-  //   }else
-  //   if(Antes==1){
-  //     setAntes(4)
-  //     setCount(1)
-  //   }else
-  //  if(count==1){
-  //   setCount(4)
-    
-  //  }}
-   
-  //  else{
-  //   setCount(count-1)
-  //   setAntes(Antes-1)
-  //  }
-  
- if(Antes!=4){
-  setAntes(1)
-  setCount(count-1)
- }else{
-  setAntes(Antes-1)
-  setCount(count-1)
- }
-  }
+]
 
 
   return (
     <div className="App">
-      <h2 className='asddd'>{Antes}</h2>
-     
+      {/* <h2 className='asddd'>{Antes} Yo soy el antes</h2> */}
+
       <div className='colapso'></div>
-      <button onClick={RotacionResta} className='btnCambio mar' >Resta</button>
-      <button onClick={RotacionSuma} className='btnCambio' >Suma</button>
-     <Header/>  <h1 className='asddd'>{count}</h1 >
-     <Config/>
      
-     <Sectiones/>
-    <div className='Rotador'>
+      {/* <h1 className='asddd'>{SliderPrincipal} Yo soy el actual</h1 > */}
+      <Header /> 
+      <Config />
+      <Sectiones />
+<div>
+<div className='Rotador'>
+        
+        <div className='Contenbtns'>
+        <button onClick={RotacionResta} className='btnCambio mar' >
+                  <span class="material-symbols-outlined">
+                  arrow_back_ios
+                  </span>
+            </button>
+            <button onClick={RotacionSuma} className='btnCambio' >
+                  <span class="material-symbols-outlined">
+                  arrow_forward_ios
+                 </span>
+            </button>
+        </div>
+        
+          {
+            arrayComponet.map(componente=>(
+              <div key={componente.id}
+              className={`Resto ${
+                SliderPrincipal == componente.id && Lado == 0 ? " RotaX" :
+                 SliderPrincipal == componente.id && Lado == 1 ? " RotaY" : 
+                 Antes == componente.id && Lado == 0 ? "Rota" : 
+                 Antes == componente.id && Lado == 1 ? " Rota RotacionRegreso" :
+                 "displaynone"
+                 }`}>
+             {componente.componente}
+              
+              </div>
+         
+            ))
+          }
 
-    <div id='as' className={count==1&&Activo==0?"Resto  RotaX":Antes==1&&Activo==1?"Resto  RotaY":Activo==0?"Resto Rota":"Resto Rota RotacionRegreso"}>
-      <Present/>     
-     </div>
+        </div>
+</div>
 
-     <div id='23' className={count==2&&Activo==0?"Resto  RotaX":Antes==2&&Activo==1?"Resto  RotaY":Activo==0?"Resto  Rota":"Resto Rota RotacionRegreso"}>
-     <Habilidades/>
-     </div>
-     <div  className={count==3&&Activo==0?"Resto RotaX":Antes==3&&Activo==1?"Resto  RotaY":Activo==0?"Resto Rota":"Resto Rota RotacionRegreso"}>
-     <Portafolio/>
-     </div>
-     <div  className={count==4&&Activo==0?"Resto RotaX":Antes==4&&Activo==1?"Resto  RotaY":Activo==0?"Resto Rota":"Resto Rota RotacionRegreso"}>
-     <Portafolio/>
-     </div>
-     
-    </div>
-     
-    
-     <div className='colapso'></div>
+
+      <div className='colapso'></div>
     </div>
   )
 }

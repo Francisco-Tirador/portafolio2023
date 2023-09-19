@@ -1,0 +1,12 @@
+
+@media (min-width:1920px) {
+    .RotaX{
+        scale: 1.3;
+    }
+    .RotaY{
+        scale: 1.3;
+    }
+    .Rota{
+        scale: 1.3;
+    }
+}

@@ -13,6 +13,23 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+/* Estilo del scrollbar */
+::-webkit-scrollbar {
+  width: 6px; /* Ancho del scrollbar */
+}
+
+/* Estilo del thumb (el "mango" del scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #1eba0a; /* Color de fondo del thumb */
+  border-radius: 6px; /* Bordes redondeados */
+}
+
+/* Estilo del track (el "rastro" del scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: #022a69;
+  border-radius:6px; /* Color de fondo del track */
+}
+
 
 a {
   font-weight: 500;
@@ -50,13 +67,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
+
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -82,7 +97,7 @@ button:focus-visible {
   width: 100%;
 }
 .col-6{
-  width: 50%;
+  width: 60%;
 }
 .col-4{
   width: 33.3%;
