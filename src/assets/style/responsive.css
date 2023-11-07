@@ -9,4 +9,214 @@
     .Rota{
         scale: 1.3;
     }
+   
+}
+
+@media (max-width:1300px) {
+    .Contenbtns{
+        right: -50px;
+    }
+    .ContenConfig{
+        margin-top: 250px;
+    }
+}
+@media (max-width:1100px) {
+    body{
+        overflow-x: hidden;
+    }
+    .Rotador{
+        width: 250px;
+        transform: translateX(330px) translateZ(400px );
+    }
+    .Contenbtns{
+        right: 35px;
+    }
+    .RotaX{
+        scale: 0.8;
+    }
+    .RotaY{
+        scale: 0.8;
+    }
+    .Rota{
+        scale: 0.8;
+    }
+    .HeaderMobile{
+        display: none;
+    }
+}
+@media (max-width:930px) {
+    .HeaderMobile{
+        display: flex;
+    }
+    .Header{
+        display: none;
+    }
+    .Rotador{
+        width: 250px;
+        /* transform: translateX(110%) translateZ(400px ); */
+    }
+    .Contenbtns{
+        /* margin-top:530px ; */
+        width: 130px;
+        bottom: -10px;
+        right: inherit;
+        /* background-color: aqua; */
+        height: 0px;
+    }
+    .ContenConfig{
+        margin-top: 250px;
+        display: none;
+    }
+}
+
+@media (max-width:770px) {
+    .Rotador{
+        width: 150px;
+        /* background-color: rgb(127, 255, 129); */
+        transform: translateX(100px) translateZ(400px );
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+
+
+    }
+    .Contenbtns{
+        right: 100px;
+    }
+}
+@media (max-width:754px) {
+    .Rotador{
+        width: 150px;
+        /* background-color: aquamarine; */
+        /* transform: translateX(130px) translateZ(400px ); */
+    }
+    .Contenbtns{
+        top:520px;
+        right: 100px;
+    }
+    .RotaX{
+        scale: 1;
+        width: 350px;
+    }
+    .RotaY{
+        width: 350px;
+        scale: 1;
+    }
+    .Rota{
+        width: 350px;
+        /* background-color: aqua; */
+        scale: 1;
+    }
+
+    
+@keyframes Rotacion {
+    100%{
+      transform: rotateY(90deg) translateZ(50px);
+      opacity: 30%;
+      display: none;
+    }
+  }
+  @keyframes RotacionXX {
+    100%{
+      transform: rotateY(-90deg) translateZ(50px);
+      opacity: 30%;
+      display: none;
+    }
+  }
+  @keyframes RotacionX {
+    
+    100%{
+      transform: rotateY(0deg) translateZ(50px);
+      opacity: 100%;
+    }
+  }
+  @keyframes RotacionY {
+    0%{
+      transform: rotateY(90deg) translateZ(50px);
+    }
+    
+    100%{
+       transform: rotateY(0deg) translateZ(50px);
+       opacity: 100%;
+    }
+  }
+}
+@media (max-width:454px) {
+    .Rotador{
+        width: 150px;
+        /* background-color: aquamarine; */
+        transform: translateX(-50px) translateZ(400px );
+    }
+    .Contenbtns{
+        right: 0px;
+        top:500px;
+        bottom: 25px;
+        background-color: aqua;
+    }
+    .RotaX{
+        scale: 1;
+        width: 250px;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        transform: rotateY(-90deg) translateZ(80px);
+    }
+    .RotaY{
+        width: 250px;
+        scale: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        transform: rotateY(-90deg) translateZ(220px);
+    }
+    .Rota{
+        transform: rotateY(0deg) translateZ(220px);
+        width: 250px;
+        scale: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    
+@keyframes Rotacion {
+    100%{
+      transform: rotateY(90deg) translateZ(120px);
+      opacity: 30%;
+      display: none;
+    }
+  }
+  @keyframes RotacionXX {
+    100%{
+      transform: rotateY(-90deg) translateZ(120px);
+      opacity: 30%;
+      display: none;
+    }
+  }
+  @keyframes RotacionX {
+    
+    100%{
+      transform: rotateY(0deg) translateZ(120px);
+      opacity: 100%;
+    }
+  }
+  @keyframes RotacionY {
+    0%{
+      transform: rotateY(90deg) translateZ(120px);
+    }
+    
+    100%{
+       transform: rotateY(0deg) translateZ(120px);
+       opacity: 100%;
+    }
+  }
 }

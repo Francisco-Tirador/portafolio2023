@@ -7,6 +7,7 @@ import Present from './componentes/Present'
 import Sectiones from './componentes/Sectiones'
 import Habilidades from './sections/Habilidades'
 import Portafolio from './sections/Portafolio'
+import HeaderMobile from './componentes/HeaderMobile'
 
 
 
@@ -26,7 +27,7 @@ function App() {
       setSliderPrincipal(SliderPrincipal + 1)
     }
   }
- 
+
   const RotacionResta = () => {
     setLado(0);//Nota va a la derecha
     if (SliderPrincipal == 1) {
@@ -37,26 +38,14 @@ function App() {
       setSliderPrincipal(SliderPrincipal - 1)
     }
   };
-  
 
-  const arrayComponet=[
-    {
-    componente:<Present />,
-    id:1
-   },
-    {
-    componente:<Habilidades />,
-    id:2
-   },
-    {
-    componente:<Portafolio />,
-    id:3
-   },
-    {
-    componente:<Portafolio />,
-    id:4
-   }
-]
+
+  const arrayComponet = [
+    { componente: <Present />, id: 1 },
+    { componente: <Habilidades />, id: 2 },
+    { componente: <Portafolio />, id: 3 },
+    { componente: <Portafolio />, id: 4 }
+  ]
 
 
   return (
@@ -64,46 +53,46 @@ function App() {
       {/* <h2 className='asddd'>{Antes} Yo soy el antes</h2> */}
 
       <div className='colapso'></div>
-     
+
       {/* <h1 className='asddd'>{SliderPrincipal} Yo soy el actual</h1 > */}
-      <Header /> 
+      <Header />
+      <HeaderMobile/>
       <Config />
       <Sectiones />
-<div>
-<div className='Rotador'>
-        
-        <div className='Contenbtns'>
-        <button onClick={RotacionResta} className='btnCambio mar' >
-                  <span class="material-symbols-outlined">
-                  arrow_back_ios
-                  </span>
+      <div>
+        <div className='Rotador'>
+
+          <div className='Contenbtns'>
+            <button onClick={RotacionResta} className='btnCambio mar' >
+              <span class="material-symbols-outlined">
+                arrow_back_ios
+              </span>
             </button>
             <button onClick={RotacionSuma} className='btnCambio' >
-                  <span class="material-symbols-outlined">
-                  arrow_forward_ios
-                 </span>
+              <span class="material-symbols-outlined">
+                arrow_forward_ios
+              </span>
             </button>
-        </div>
-        
+          </div>
+
           {
-            arrayComponet.map(componente=>(
+            arrayComponet.map(componente => (
               <div key={componente.id}
-              className={`Resto ${
-                SliderPrincipal == componente.id && Lado == 0 ? " RotaX" :
-                 SliderPrincipal == componente.id && Lado == 1 ? " RotaY" : 
-                 Antes == componente.id && Lado == 0 ? "Rota" : 
-                 Antes == componente.id && Lado == 1 ? " Rota RotacionRegreso" :
-                 "displaynone"
-                 }`}>
-             {componente.componente}
-              
+                className={`Resto ${SliderPrincipal == componente.id && Lado == 0 ? " RotaX" :
+                    SliderPrincipal == componente.id && Lado == 1 ? " RotaY" :
+                      Antes == componente.id && Lado == 0 ? "Rota" :
+                        Antes == componente.id && Lado == 1 ? " Rota RotacionRegreso" :
+                          "displaynone"
+                  }`}>
+                {componente.componente}
+
               </div>
-         
+
             ))
           }
 
         </div>
-</div>
+      </div>
 
 
       <div className='colapso'></div>
