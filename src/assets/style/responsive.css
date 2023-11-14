@@ -145,8 +145,12 @@
   }
 }
 @media (max-width:454px) {
+    .App{
+        min-height: 120vh
+    }
     .Rotador{
         width: 150px;
+        margin-top: 20%;
         /* background-color: aquamarine; */
         transform: translateX(-50px) translateZ(400px );
     }
