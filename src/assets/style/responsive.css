@@ -53,14 +53,11 @@
     }
     .Rotador{
         width: 250px;
-        /* transform: translateX(110%) translateZ(400px ); */
     }
     .Contenbtns{
-        /* margin-top:530px ; */
         width: 130px;
         bottom: -10px;
         right: inherit;
-        /* background-color: aqua; */
         height: 0px;
     }
     .ContenConfig{
@@ -70,9 +67,13 @@
 }
 
 @media (max-width:770px) {
+    .ContenDev{
+        position: absolute;
+        left: 0;
+        transform: rotate(90deg);
+    }
     .Rotador{
         width: 150px;
-        /* background-color: rgb(127, 255, 129); */
         transform: translateX(100px) translateZ(400px );
         position: absolute;
         left: 0;
@@ -90,8 +91,6 @@
 @media (max-width:754px) {
     .Rotador{
         width: 150px;
-        /* background-color: aquamarine; */
-        /* transform: translateX(130px) translateZ(400px ); */
     }
     .Contenbtns{
         top:520px;
@@ -107,7 +106,6 @@
     }
     .Rota{
         width: 350px;
-        /* background-color: aqua; */
         scale: 1;
     }
 
@@ -145,20 +143,15 @@
   }
 }
 @media (max-width:454px) {
-    .App{
-        min-height: 120vh
-    }
+   
     .Rotador{
         width: 150px;
-        margin-top: 20%;
-        /* background-color: aquamarine; */
+        margin-top: 35%;
         transform: translateX(-50px) translateZ(400px );
     }
     .Contenbtns{
         right: 0px;
         top:500px;
-        bottom: 25px;
-        background-color: aqua;
     }
     .RotaX{
         scale: 1;
@@ -222,5 +215,22 @@
        transform: rotateY(0deg) translateZ(120px);
        opacity: 100%;
     }
+  }
+  .Center{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .col-6{
+    width: 100% !important;
+  }
+  .scrol_mobile{
+    overflow: scroll;
+  }
+  .btn-animado{
+    font-size: small;
+  }
+
+  .HabiliIMG{
+    width: 60px;
   }
 }

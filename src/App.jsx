@@ -52,7 +52,7 @@ function App() {
     <div className="App">
       {/* <h2 className='asddd'>{Antes} Yo soy el antes</h2> */}
 
-      <div className='colapso'></div>
+      {/* <div className='colapso'></div> */}
 
       {/* <h1 className='asddd'>{SliderPrincipal} Yo soy el actual</h1 > */}
       <Header />
@@ -92,10 +92,18 @@ function App() {
           }
 
         </div>
+      <div className='ContenDev'>
+      {
+          arrayComponet.map((componente) => (
+            <span key={componente.id} class="material-symbols-outlined">
+            {componente.id==SliderPrincipal?"radio_button_checked":"radio_button_unchecked"}
+            </span>
+            
+          ))
+        }
+      </div>
       </div>
 
-
-      <div className='colapso'></div>
     </div>
   )
 }

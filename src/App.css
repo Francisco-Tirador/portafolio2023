@@ -172,10 +172,11 @@ overflow: hidden;
   animation-duration: 3000ms; 
   transition: 0.5s;
 }
-
+.ContenDev{
+  transform: translate(100px,35px);
+}
 .Contenbtns{
   z-index: 500;
-  background-color: #10b6ed75;
   width: 10%;
   position: absolute;
   right: -150px;
