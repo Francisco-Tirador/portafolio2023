@@ -1,7 +1,7 @@
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logoF from '../assets/img/{f}.png'
+import logoF from '../assets/img/logoFranco.png'
 import React from 'react'
 
 const Header = () => {

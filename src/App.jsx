@@ -8,6 +8,7 @@ import Sectiones from './componentes/Sectiones'
 import Habilidades from './sections/Habilidades'
 import Portafolio from './sections/Portafolio'
 import HeaderMobile from './componentes/HeaderMobile'
+import Proyectos from './sections/Proyectos'
 
 
 
@@ -43,7 +44,7 @@ function App() {
   const arrayComponet = [
     { componente: <Present />, id: 1 },
     { componente: <Habilidades />, id: 2 },
-    { componente: <Portafolio />, id: 3 },
+    { componente: <Proyectos />, id: 3 },
     { componente: <Portafolio />, id: 4 }
   ]
 

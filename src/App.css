@@ -343,6 +343,68 @@ margin-bottom: 0;
   
 box-shadow: 0px 20px 20px 5px var(--Text-inportant-color);
 }
+/* //!    aqui empieza estilos secsion proyectos /////////////////////////////////// */
+
+.contenProyecto{
+ width: 40%;
+ min-width: 250px;
+ height: 250px;
+ border-radius: 10px;
+ /* background-color: var(--1paleta-Tercer-color); */
+ position: relative;
+}
+.contenProyecto img{
+ border-radius: 10px;
+ transition: 0.5s;
+}
+.logoPoryect{
+  max-width: 80%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  /* bottom: 0; */
+  top:120px;
+  margin: auto;
+  transition: 0.5s;
+}
+.personajeProyect{
+  width: 55%;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 0px;
+  opacity: 0;
+  transition: 0.5s;
+}
+ .contenProyecto:hover .logoPoryect{ 
+top: -50px;
+
+}
+ .contenProyecto:hover .personajeProyect{ 
+bottom: 50px;
+opacity: 100;
+}
+ .contenProyecto:hover  .fondoProyect{ 
+  transform: rotate3d(1, 0, 0, 45deg);
+/* scale: 2; */
+}
+/* .contenProyecto:hover{
+top: -50px;
+scale: 3;
+background-color: #026913;
+} */
+
+
+
+
+
+
+
+
+
+
+
 
 
 

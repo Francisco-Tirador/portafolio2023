@@ -1,11 +1,11 @@
 import React from 'react'
-// import logo from '../assets/img/'
+import logo from '../assets/img/logoFranco.png'
 
 
 const HeaderMobile = () => {
   return (
     <div className='HeaderMobile'>
-      <img  src="https://francisco-beltran.netlify.app/assets/%7BF%7D.6abe0781.png" alt="" />
+      <img  src={logo} alt="" />
       <p className='FirstText'>FRENCISCO BELTRAN</p>  
       <span class="material-symbols-outlined ico_Toggle_Mobile">
         menu
