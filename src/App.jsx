@@ -50,11 +50,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <h2 className='asddd'>{Antes} Yo soy el antes</h2> */}
-
-      {/* <div className='colapso'></div> */}
-
-      {/* <h1 className='asddd'>{SliderPrincipal} Yo soy el actual</h1 > */}
+    
       <Header />
       <HeaderMobile/>
       <Config />

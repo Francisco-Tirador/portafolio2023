@@ -1,12 +1,13 @@
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import logoF from '../assets/img/{f}.png'
 import React from 'react'
 
 const Header = () => {
   return (
     <div className='Header'>
-        <img className='ImgHeader' src="https://francisco-beltran.netlify.app/assets/%7BF%7D.6abe0781.png" alt="Logo Francisco Beltran" />
+        <img className='ImgHeader' src={logoF} alt="Logo Francisco Beltran" />
         <div>
             <div >
                 <h2 className='TextHeader'>Hola soy</h2>
