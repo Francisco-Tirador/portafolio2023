@@ -53,6 +53,7 @@
     }
     .Rotador{
         width: 250px;
+        transform: translateX(290px) translateZ(400px );
     }
     .Contenbtns{
         width: 130px;
@@ -74,7 +75,7 @@
     }
     .Rotador{
         width: 150px;
-        transform: translateX(100px) translateZ(400px );
+        transform: translateX(220%) translateZ(400px );
         position: absolute;
         left: 0;
         right: 0;
@@ -146,7 +147,7 @@
    
     .Rotador{
         width: 150px;
-        margin-top: 25%;
+        margin-top: 45%;
         transform: translateX(-50px) translateZ(400px );
     }
     .btnCambio{
@@ -239,5 +240,37 @@
 
   .HabiliIMG{
     width: 60px;
+  }
+.boxContenProyect{
+  display: block;
+  padding: 0;
+}
+.contenProyecto{
+  /* background-color: aqua; */
+  min-width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fondoProyect{
+    width: 200px;
+    height: 100%;
+}
+.boxContenProyect:hover .logoPoryect{ 
+  top: -10px;
+  
+  }
+.personajeProyect{
+  height: 100px;
+}
+
+  .infoProyect{
+    display: none;
+  }
+  .btn-secundario{
+    scale: 0.8;
+    height: 18px;
+    overflow: hidden;
   }
 }
