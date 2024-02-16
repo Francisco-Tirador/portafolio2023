@@ -198,7 +198,7 @@ overflow: hidden;
 }
 .btnCambio{
   outline: none;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
   color: #ffffff;
   background-color: #022a69;
@@ -364,6 +364,7 @@ box-shadow: 0px 20px 20px 5px var(--Text-inportant-color);
   padding: 20px;
   margin: 10px 0px;
   display: flex;
+  transition: 0.3s;
 }
 
 .contenProyecto{
@@ -408,6 +409,9 @@ opacity: 100;
   transform: rotate3d(1, 0, 0, 45deg);
 
 }
+ .boxContenProyect:hover  { 
+  background-color: var(--1paleta-Tercer-color);
+}
 .contenInfoProyetc{
   display: flex;
   justify-content: center;
@@ -424,6 +428,80 @@ opacity: 100;
   display: flex;
   justify-content: space-around;
 }
+
+
+
+/* //! contacnto para formulario////////////////////////////////// */
+.ContenForm {
+  background: rgb(2,42,105);
+  background: radial-gradient(circle, rgba(2,42,105,1) 42%, rgb(53, 206, 22) 100%);
+  margin-top: 50px;
+  width: 100%;
+  display: block;
+  animation: 2s infinite linear  alternate moveGradient;
+  transition: 0.5s;
+  background-size: 200% 200%; /* Aumenta el tamaño del fondo para tener espacio para el movimiento */
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50%{
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.ContenForm input{
+  background-color: #ffffff;
+  width: 80%;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  height: 30px;
+  margin: 5px 0px;
+  padding: 5px 15px 5px 50px;
+  box-sizing: border-box;
+}
+.ContenForm textarea{
+  width: 80%;
+  border-radius: 5px;
+  border: 2px rgba(0, 0, 0, 0.726) dashed;
+  min-height: 150px;
+  max-height: 150px;
+  min-width: 80%;
+  max-width: 80%;
+  outline: none;
+}
+.ContenForm label{
+ width: 10%;
+ display: block;
+ margin-left: 20%;
+}
+.textForm{
+  background-color: #399a88;
+  padding: 15px;
+  border-radius: 0px 0px 50px 50px;
+}
+
+.ContenInputsForm{
+  position: relative;
+}
+.iconForm{
+  position: absolute;
+  color: var(--1paleta-Tercer-color);
+  transform: translate(10px,8px);
+}
+
+
+
+
+
+
+
 
 
 

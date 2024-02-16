@@ -1,5 +1,8 @@
 
 @media (min-width:1920px) {
+  .ContenDev{
+    transform: translate(31%,80px);
+  }
     .RotaX{
         scale: 1.3;
     }
@@ -9,8 +12,14 @@
     .Rota{
         scale: 1.3;
     }
+    .Rotador{
+      transform: translateX(300px) translateZ(400px );
+  }
    
 }
+
+
+
 
 @media (max-width:1300px) {
     .Contenbtns{

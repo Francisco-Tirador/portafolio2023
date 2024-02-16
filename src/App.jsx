@@ -6,7 +6,7 @@ import Header from './componentes/Header'
 import Present from './componentes/Present'
 import Sectiones from './componentes/Sectiones'
 import Habilidades from './sections/Habilidades'
-import Portafolio from './sections/Portafolio'
+import Contacto from './sections/Contacto'
 import HeaderMobile from './componentes/HeaderMobile'
 import Proyectos from './sections/Proyectos'
 
@@ -45,7 +45,7 @@ function App() {
     { componente: <Present />, id: 1 },
     { componente: <Habilidades />, id: 2 },
     { componente: <Proyectos />, id: 3 },
-    { componente: <Portafolio />, id: 4 }
+    { componente: <Contacto />, id: 4 }
   ]
 
 
