@@ -25,18 +25,23 @@ const Habilidades = () => {
   return (
     <div className='center contenCara'>
         <h2 className='apt FirstText'>Habilidades</h2>
+        <h4 className='apt SecondText'>FRONT-END</h4>
         <img className="HabiliIMG" src={html} alt="" />
         <img className="HabiliIMG" src={css} alt="" />
         <img className="HabiliIMG" src={js} alt="" />
         <img className="HabiliIMG" src={ts} alt="" />
         <img className="HabiliIMG" src={react} alt="" />
         <img className="HabiliIMG" src={angular} alt="" />
+        <h4 className='apt SecondText'>DESARROLLO MÓVIL</h4>
+        <img className="HabiliIMG" src={ionic} alt="" />
+        <h4 className='apt SecondText'>BACK-END</h4>
         <img className="HabiliIMG" src={php} alt="" />
         <img className="HabiliIMG" src={mysql} alt="" />
+        <h4 className='apt SecondText'>DISEÑO</h4>
         <img className="HabiliIMG" src={ai} alt="" />
         <img className="HabiliIMG" src={corel} alt="" />
         <img className="HabiliIMG" src={ps} alt="" />
-        <img className="HabiliIMG" src={ionic} alt="" />
+        <h4 className='apt SecondText'>HERRAMIENTA</h4>
         <img className="HabiliIMG" src={git} alt="" />
         <img className="HabiliIMG" src={npm} alt="" />
         

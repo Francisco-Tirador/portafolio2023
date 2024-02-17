@@ -9,11 +9,13 @@ import Habilidades from './sections/Habilidades'
 import Contacto from './sections/Contacto'
 import HeaderMobile from './componentes/HeaderMobile'
 import Proyectos from './sections/Proyectos'
+import Toasts from './componentes/Toasts'
 
 
 
 
 function App() {
+  const [message, setMessage] = useState(false)//Nota SliderPrincipal almacena quin tendra la poscion de vista 
   const [SliderPrincipal, setSliderPrincipal] = useState(1)//Nota SliderPrincipal almacena quin tendra la poscion de vista 
   const [Antes, setAntes] = useState(4)//Nota Antes almacena a quien se regresa para poder hacer la animacion de regreso
   const [Lado, setLado] = useState(0)//Nota aqui se deside si la animacion sera derecha izquierda dependiendo del 0 a 1
@@ -45,13 +47,13 @@ function App() {
     { componente: <Present />, id: 1 },
     { componente: <Habilidades />, id: 2 },
     { componente: <Proyectos />, id: 3 },
-    { componente: <Contacto />, id: 4 }
+    { componente: <Contacto toast={setMessage} />, id: 4 }
   ]
 
 
   return (
     <div className="App">
-    
+      {message&&<Toasts message={message} />}
       <Header />
       <HeaderMobile/>
       <Config />
