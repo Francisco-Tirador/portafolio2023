@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import './assets/style/responsive.css'
 import Config from './componentes/Config'
@@ -51,6 +51,11 @@ function App() {
   ]
 
 
+  useEffect(() => {
+    setTimeout(() => {
+      setMessage(false);
+    }, 5000);
+  }, [message])
   return (
     <div className="App">
       {message&&<Toasts message={message} />}

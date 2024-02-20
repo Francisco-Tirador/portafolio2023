@@ -1,12 +1,16 @@
 import axios from 'axios';
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form';
 
 const Contacto = ({toast}) => {
-
+  
   const { handleSubmit, register, reset } = useForm()
+  const [stateBtn,setStateBtn]=useState(false)
+
 
   const submitMessage=(data)=>{
+      setStateBtn(1)
+
     var fechaActual = new Date();
     var year = fechaActual.getFullYear();
     var month = fechaActual.getMonth() + 1; 
@@ -22,7 +26,18 @@ const Contacto = ({toast}) => {
     axios.post(url,dataInfo)
       .then(res=>{
         toast("Mensaje enviado, muchas gracias por contactarme")
+        reset({
+          message:""
+        })
+        setStateBtn(2)
+        setTimeout(() => {
+          setStateBtn(false);
+        }, 5000);
       })
+      .catch(res=>{
+        setStateBtn(false)
+      })
+
   }
 
 
@@ -30,7 +45,7 @@ const Contacto = ({toast}) => {
     <>
 
    
-    <div className='center contenCara noneScrol scrol_mobile'>
+    <div className='center contenCara noneScrol '>
       
       <h2 className='apt FirstText'>Contacto</h2>
       <div className='ContenForm'>
@@ -42,22 +57,34 @@ const Contacto = ({toast}) => {
             <span class="material-symbols-outlined iconForm">
               account_circle
             </span>
-            <input type="text" placeholder='Nombre' {...register("nombre")} />
+            <input type="text" placeholder='Nombre' {...register("nombre")} required/>
           </span>
           <label htmlFor="">Correo</label>
           <span>
           <span class="material-symbols-outlined iconForm">
              mail
           </span>
-          <input type="email" placeholder='example@example.com' {...register("email")}/>
+          <input type="email" placeholder='example@example.com' {...register("email")} required/>
           </span>
           
-          <textarea  {...register("message")}name="message" cols="30" rows="10" placeholder='Escribe tu mensaje'>
+          <textarea  {...register("message")}name="message" cols="30" rows="10" placeholder='Escribe tu mensaje' required>
 
           </textarea>
           
         </form>
-        <button className='btn ' form='formContacto'>Enviar</button>
+        <button className='btn ' form='formContacto'>
+          {
+          !stateBtn?
+          "Enviar":
+          stateBtn==1?
+          <span class="material-symbols-outlined rotate">
+          rotate_right
+          </span>:
+          <span class="material-symbols-outlined">
+          check_circle
+          </span>
+          }
+        </button>
       </div>
 
 

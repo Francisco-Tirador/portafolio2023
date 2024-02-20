@@ -489,7 +489,7 @@ body {
 
 
 
-/* //! contacnto para formulario////////////////////////////////// */
+/* //! contacto para formulario////////////////////////////////// */
 .ContenForm {
   background: rgb(2, 42, 105);
   background: radial-gradient(circle, rgba(2, 42, 105, 1) 42%, rgb(53, 206, 22) 100%);
@@ -573,9 +573,63 @@ body {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 150px;
+  right: -250px;
   padding: 10px;
   color: #000;
-  /* font-size: small; */
+  z-index: 50000;
+  opacity: 0;
+  animation: 1s 1  forwards notiFirts;
 }
+
+@keyframes rotacion360 {
+ 
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes notiFirts {
+  50%{
+    right: 0;
+    top: 150px;
+  }
+  100%{
+    opacity: 100;
+    top: 0;
+    right: 0;
+  }
+}
+.rotate{
+  animation: 0.5s infinite linear rotacion360;
+}
+.ContenGallery{
+  z-index: 800;
+  background-color: #8eb5f3;
+  position: absolute;
+  width: 95%;
+  height:85%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+/* //! empieza galleria  ///////////////////////////////////////[ */
+
+
+.headerGallery{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 15px;
+  border-bottom: 2px solid rgba(81, 81, 81, 0.256);
+}
+
+
+
+
+
+
+

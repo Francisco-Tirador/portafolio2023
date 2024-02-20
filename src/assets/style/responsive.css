@@ -156,7 +156,7 @@
    
     .Rotador{
         width: 150px;
-        margin-top: 45%;
+        margin-top: 25%;
         transform: translateX(-50px) translateZ(400px );
     }
     .btnCambio{
@@ -241,7 +241,7 @@
     width: 100% !important;
   }
   .scrol_mobile{
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .btn-animado{
     font-size: small;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import pokebola from '../assets/img/proyectos/pokebola.png'
 import logoPokemon from '../assets/img/proyectos/logoPokemon.png'
 import charmander from '../assets/img/proyectos/charmander.png'
@@ -8,12 +8,14 @@ import logoRick from '../assets/img/proyectos/logoRick.png'
 import fondoGaleria from '../assets/img/proyectos/galeria.png'
 import iconosGaleria from '../assets/img/proyectos/iconosGaleria.png'
 import galeriaTitulo from '../assets/img/proyectos/galeriaTitulo.png'
+import Galeria from '../componentes/Galeria'
 
 
 
 
 
 const Proyectos = () => {
+  const [gallery,setGalery]=useState(false)
 
   const ArrayProyects = [
 
@@ -23,11 +25,18 @@ const Proyectos = () => {
 
   ]
 
-
+  const toggleGallery=()=>{
+    setGalery(!gallery)
+  }
 
   return (
+  
     <div className='center contenCara col-12 '>
       <h2 className='apt FirstText'>Proyectos</h2>
+      {
+          gallery&&
+          <Galeria btnClose={toggleGallery}  />
+      }
       {
         ArrayProyects.map(P => (
           <div className='boxContenProyect'>
@@ -44,8 +53,15 @@ const Proyectos = () => {
                 }
               </span>
               <div className='contenBtn col-12'>
+               {
+                P.id!=2?
+                <>
                 <a target='_blank' href={P.git} className='btn-secundario '>Git</a>
                 <a target='_blank' href={P.page} className='btn-secundario '>Ver Proyecto</a>
+                </>
+                :
+                <button target='_blank' onClick={toggleGallery}  className='btn-secundario '>Ver Galeria</button>
+               }
               </div>
             </div>
           </div>
