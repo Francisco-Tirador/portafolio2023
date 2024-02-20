@@ -31,12 +31,13 @@ const Proyectos = () => {
 
   return (
   
-    <div className='center contenCara col-12 '>
+    <div className='center contenCara overflow noneScrol col-12 '>
       <h2 className='apt FirstText'>Proyectos</h2>
-      {
-          gallery&&
-          <Galeria btnClose={toggleGallery}  />
-      }
+      
+         
+         <Galeria btnClose={toggleGallery} slideOpen={gallery} />
+         <div className='box-conten-gallery'>
+      
       {
         ArrayProyects.map(P => (
           <div className='boxContenProyect'>
@@ -67,6 +68,7 @@ const Proyectos = () => {
           </div>
         ))
       }
+      </div>
     </div>
   )
 }

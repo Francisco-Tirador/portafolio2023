@@ -260,6 +260,7 @@ body {
   max-width: 900px;
   max-height: 500px;
   height: 500px;
+  position: relative;
   overflow-y: scroll;
 }
 
@@ -451,7 +452,7 @@ body {
 }
 
 .boxContenProyect:hover .logoPoryect {
-  top: -50px;
+  top: -40px;
 
 }
 
@@ -602,21 +603,26 @@ body {
 .rotate{
   animation: 0.5s infinite linear rotacion360;
 }
+/* //! empieza galleria  ///////////////////////////////////////[ */
+.box-conten-gallery{
+  /* background-color: #022a69; */
+  width: 100%;
+  height: 90%;
+  overflow-y: scroll !important;
+}
 .ContenGallery{
   z-index: 800;
-  background-color: #8eb5f3;
+  background-color: #2f3e55;
   position: absolute;
   width: 95%;
   height:85%;
   right: 0;
   left: 0;
-  bottom: 0;
+  bottom: -100%;
   margin: auto;
+  overflow-y: scroll;
+  transition: 0.5s;
 }
-
-
-/* //! empieza galleria  ///////////////////////////////////////[ */
-
 
 .headerGallery{
   display: flex;
@@ -625,11 +631,26 @@ body {
   box-sizing: border-box;
   padding: 0px 15px;
   border-bottom: 2px solid rgba(81, 81, 81, 0.256);
+  position: sticky;
+  top: 0;
+  background-color: #1f2939;
+  z-index: 21;
 }
 
 
 
+.slider{
+  width: 70%;
+  height: 50%;
+  margin: auto;
+}
+.slider div img{
+  height: 200px;
+}
 
-
-
+.openSlide{
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
 
