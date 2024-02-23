@@ -645,7 +645,8 @@ body {
   margin: auto;
 }
 .slider div img{
-  height: 200px;
+  height: 130px;
+  width: 100%;
 }
 
 .openSlide{
