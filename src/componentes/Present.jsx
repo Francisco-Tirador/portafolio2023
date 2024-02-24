@@ -15,8 +15,10 @@ const Present = () => {
     Saludos !!!
     </p>
 
-    <a href='' className='btn-secundario'>
+    <a href='https://drive.google.com/file/d/1TX0lguraXb1gXzgaT7yn0oT0QoIzYH4U/view?usp=sharing' target='_blank' >
+      <button className='btn-secundario'>
       DESCARGAR CURRÍCULUM
+      </button>
     </a>
    </div>
     </div>

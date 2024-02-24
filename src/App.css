@@ -4,11 +4,7 @@ body {
 }
 
 #root {
-  /* display: flex;
-  place-items: center;
-  justify-content: center;
-  align-items: center; */
-  /* margin: 0 ; */
+ 
   text-align: center;
   background-color: #209f0d;
   --1paleta-First-color: #026913;
@@ -20,7 +16,7 @@ body {
 
 .App {
   margin: 0;
-  background-image: url(./assets/img/back12.jpg);
+  background-image: url(./assets/img/back3.jpg);
   min-height: 100vh;
   background-attachment: fixed;
   background-size: cover;
@@ -64,6 +60,10 @@ body {
 
 .TextHeader {
   font-size: large;
+}
+.contenRedes{
+  /* background-color: #022a69; */
+  margin-top: 5%;
 }
 
 .btn {
@@ -150,7 +150,7 @@ body {
   position: absolute;
   top: 0;
   background-color: #022a69;
-  width: 100%;
+  width: 95%;
   height: 50px;
   padding: 5px;
   display: none;
@@ -533,8 +533,8 @@ body {
   width: 80%;
   border-radius: 5px;
   border: 2px rgba(0, 0, 0, 0.726) dashed;
-  min-height: 150px;
-  max-height: 150px;
+  min-height: 50px;
+  max-height: 180px;
   min-width: 80%;
   max-width: 80%;
   outline: none;
@@ -612,7 +612,7 @@ body {
 }
 .ContenGallery{
   z-index: 800;
-  background-color: #2f3e55;
+  background-color: #cdcdcd;
   position: absolute;
   width: 95%;
   height:85%;
@@ -637,16 +637,30 @@ body {
   z-index: 21;
 }
 
+.ContenGallery div p{
+ background-color: #022a6998;
+ width: 90%;
+ margin: 0 auto;
+ margin-bottom: 20px;
+ margin-top: 30px;
+border-bottom: #000 solid 1px;
+}
 
+.slick-prev:before, .slick-next:before{
+color: var(--2paleta-Second-color) !important;
+}
 
 .slider{
-  width: 70%;
-  height: 50%;
+  width: 85%;
+  height: 100%;
   margin: auto;
 }
 .slider div img{
   height: 130px;
   width: 100%;
+  max-width: 200px;
+  margin: 0px 5px;
+  cursor: pointer;
 }
 
 .openSlide{
@@ -655,3 +669,74 @@ body {
   bottom: 0;
 }
 
+.conten-picture{
+  position: absolute;
+  z-index: 20000;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000000;
+  transition: 0.5s;
+  opacity: 0;
+  animation: 0.3s 1 forwards linear openPicture;
+}
+@keyframes openPicture {
+  100%{
+    opacity: 100;
+  }
+}
+.conten-picture img{
+  width: 95%;
+}
+
+.btn-gallery{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 200022;
+  margin: 20px 15px;
+}
+
+.boxContacMobile{
+  margin: auto;
+  /* background-color: #026913; */
+}
+
+.menuMobile{
+  /* scale: 0.8; */
+  background-color: #022a69eb;
+  position: absolute;
+  width:55%;
+  right: 0;
+  height:30%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50%;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.menu-open-mobile{
+  z-index: 1555444454;
+  scale: 1.1;
+}
+.menu-close-mobile{
+  z-index: -1;
+  scale: 0.8;
+}
+
+.close-menu-mobile{
+  border: 1px solid rgba(0, 0, 0, 0.571);
+  border-radius: 50%;
+  padding: 8px;
+  background-color: #00000055;
+}

@@ -153,6 +153,7 @@
   }
 }
 @media (max-width:454px) {
+ 
    
     .Rotador{
         width: 150px;
@@ -165,7 +166,6 @@
     .Contenbtns{
         left: 0px;
         top:500px;
-        background-color: aqua;
         width: 250px;
         display: flex;
         justify-content: space-between;
@@ -279,8 +279,10 @@
   }
   .btn-secundario{
     scale: 0.8;
-    height: 18px;
     overflow: hidden;
     font-size: 11px
   }
+  .ContenForm textarea{
+    height: 100px !important;
+  } 
 }

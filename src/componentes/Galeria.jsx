@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -13,7 +13,10 @@ import pay2 from '../assets/img/galeria/pago2.png'
 import status from '../assets/img/galeria/status.png'
 import log3 from '../assets/img/galeria/login3.png'
 
-const Galeria = ({btnClose,slideOpen}) => {
+const Galeria = ({btnClose,slideOpen,setPicture}) => {
+ 
+
+
   const settings = {
     dots: true,
     infinite: true,
@@ -32,16 +35,21 @@ const Galeria = ({btnClose,slideOpen}) => {
   };
 
   const arraySliders=[
-    {id:1, conten:[pay,pay2,status],descripcion:"Eh podido integrar pasarelas de pago tanto de mercado libre, Open pay (BBVA) y Red Pay estas algunas han sido integradas en php y js , partiendo de un diseño original y propio, simple pero y agradable a la vista  "},
-    {id:2,conten:[log1,log2,log3],descripcion:"Eh crado diferentes Loggins con diseños muy originales, basados en react, html y php; siempre mantenido un diseño original y amigable; ademas de integrar algunos componentes para aumentar las funcionalidades o el mantenimiento del sitio"},
-    {id:3,conten:[sist,sist2,yo],descripcion:"Tambien eh trabajado en proyectos de sitemas de reistros y afiliaciones que se adaptan a las necesidades de el cliente; siempre  colaborando de la mano con este para dar los mejores resultados  "}
+    {id:1, conten:[pay,pay2,status],descripcion:"E podido integrar pasarelas de pago tanto de mercado libre, Open pay (BBVA) y Red Pay  algunas han sido integradas en php y js , partiendo de un diseño original y propio, simple  y agradable a la vista  "},
+    {id:2,conten:[log1,log2,log3,comp],descripcion:"E crado diferentes Loggins con diseños muy originales, basados en react, html y php; siempre mantenido un diseño original y amigable; además de integrar algunos componentes para aumentar las funcionalidades o el mantenimiento del sitio"},
+    {id:3,conten:[sist,sist2,log3],descripcion:"Tambien e trabajado en proyectos de sitemas de registros y afiliaciones que se adaptan a las necesidades del cliente; siempre  colaborando de la mano con este para dar los mejores resultados  "}
   ]
+  const openPicture=(value)=>{
+    setPicture(value)
+  }
 
 
   return (
+    <>
+   
     <div className={`ContenGallery ${slideOpen&&"openSlide"}`}>
       <header className='headerGallery'>
-        <h4>GALLERIA DE PROYECTOS</h4>
+        <h4>GALLERIA DE PROYECTO</h4>
         <span class="material-symbols-outlined btn-close" onClick={btnClose}>
         disabled_by_default
         </span>
@@ -55,7 +63,7 @@ const Galeria = ({btnClose,slideOpen}) => {
         {
           S.conten.map((C,index)=>(
           <div key={index}>
-            <img src={C} alt="imagen1" />
+            <img src={C} onClick={(e)=>openPicture(C)} alt="imagen1" />
           </div>
           ))
         }
@@ -71,6 +79,7 @@ const Galeria = ({btnClose,slideOpen}) => {
       </div>
 
     </div>
+    </>
   )
 }
 export default Galeria
