@@ -8,7 +8,7 @@ const PantallaCarga = () => {
         setTimeout(() => {
           setCargando(false);
       
-        }, 3000);
+        }, 5000);
       }, [cargando])
 
 
