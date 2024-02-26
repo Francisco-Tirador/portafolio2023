@@ -6,7 +6,7 @@ const PantallaCarga = () => {
     
     useEffect(() => {
         setTimeout(() => {
-        //   setCargando(false);
+          setCargando(false);
       
         }, 3000);
       }, [cargando])
