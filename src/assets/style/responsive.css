@@ -285,4 +285,8 @@
   .ContenForm textarea{
     height: 100px !important;
   } 
+
+  .logoCarga{
+    max-width: 50%;
+  }
 }
