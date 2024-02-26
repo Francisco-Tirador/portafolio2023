@@ -10,6 +10,7 @@ import Contacto from './sections/Contacto'
 import HeaderMobile from './componentes/HeaderMobile'
 import Proyectos from './sections/Proyectos'
 import Toasts from './componentes/Toasts'
+import PantallaCarga from './componentes/PantallaCarga'
 
 
 
@@ -57,12 +58,15 @@ function App() {
     }, 5000);
   }, [message])
   return (
+    <>
+    <PantallaCarga/>
+    
     <div className="App">
       {message&&<Toasts message={message} />}
       <Header />
       <HeaderMobile/>
-      <Config />
-      <Sectiones />
+      {/* <Config />
+      <Sectiones /> */}
       <div>
         <div className='Rotador'>
 
@@ -109,6 +113,9 @@ function App() {
       </div>
 
     </div>
+
+    
+    </>
   )
 }
 
