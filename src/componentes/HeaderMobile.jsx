@@ -3,6 +3,7 @@ import logo from '../assets/img/logoFranco.png'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import close  from '../assets/icon/close.png';
 
 const HeaderMobile = () => {
   const [toggleMenu,setToggleMenu]=useState(false);
@@ -33,10 +34,11 @@ const HeaderMobile = () => {
 </div>
 <div>
 
-<a href="https://www.instagram.com/beltranbolibar/" target='_blank' > <img className='Icon ' src="https://cdn-icons-png.flaticon.com/512/3670/3670125.png" alt="Imstagram Francisco Beltran" /></a>
-<span class="material-symbols-outlined btn-close close-menu-mobile" onClick={toggle}>
-        disabled_by_default
-        </span>
+<a href="https://www.instagram.com/beltranbolibar/" target='_blank' > <img className='Icon ' src="https://cdn-icons-png.flaticon.com/512/3670/3670125.png" alt="Imstagram Francisco Beltran" /></a> 
+<img src={close} className='btn-close' onClick={toggle} />
+
+
+
 <a href="https://www.linkedin.com/in/francisco-beltr%C3%A1n-342a31213/" target='_blank' > <img className='Icon ' src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="Linkedin Francisco Beltran" /></a>
 </div>
 <a href="https://drive.google.com/file/d/1TX0lguraXb1gXzgaT7yn0oT0QoIzYH4U/view?usp=sharing" target='_blank'>

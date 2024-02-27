@@ -12,6 +12,7 @@ import sist2 from '../assets/img/galeria/sistemaAc.png'
 import pay2 from '../assets/img/galeria/pago2.png'
 import status from '../assets/img/galeria/status.png'
 import log3 from '../assets/img/galeria/login3.png'
+import close  from '../assets/icon/close.png';
 
 const Galeria = ({btnClose,slideOpen,setPicture}) => {
  
@@ -50,9 +51,8 @@ const Galeria = ({btnClose,slideOpen,setPicture}) => {
     <div className={`ContenGallery ${slideOpen&&"openSlide"}`}>
       <header className='headerGallery'>
         <h4>GALLERIA DE PROYECTO</h4>
-        <span class="material-symbols-outlined btn-close" onClick={btnClose}>
-        disabled_by_default
-        </span>
+       
+        <img src={close} className='btn-close' onClick={btnClose} />
       </header>
 
       <div>
